@@ -31,24 +31,24 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Drupal 8/9 Integration
 ### This uses GraphQL to serve data from Drupal
-This tutorial a nice overview for the getting Next.Js working with REST json<br/> 
+This tutorial a nice overview for the getting Next.Js working with REST json<br/>
 We are going to use GraphQL instead, but it is still worth watching<br/>
 https://www.youtube.com/watch?v=a-6O6KI9c48
 
 
 ####Drupal side setup:<br/>
-* Install graphql module https://www.drupal.org/project/graphql<br/>
+* Install graphql module https://www.drupal.org/project/graphql and enable “GraphQL” and “GraphQL Core” modules.<br/>
 Ran into issue with metatag module error and javascript error thrown in graphql explorer in Drupal due to layout builder, so here is how to solve these issues:
-1. Need Metatag patch:<br/> 
+1. Need Metatag patch:<br/>
 https://www.drupal.org/files/issues/2020-05-04/2980299-64.patch
-2. GraphQL's module after install at page /graphql/explorer throws this Javascript error:
+2. GraphQL's module after install at page "/graphql/explorer" throws this Javascript error:
 3. `Uncaught TypeError: Cannot read property '__schema' of undefined`
 4. To resolve this, you need to uninstall layout_builder and layout_discovery
 5. This is a pain, because you have to turn off all of the content types using layout builder and then try to uninstall.  This led to the fields not getting deleted properly so I had to go into the database and run:
 6. `delete from key_value where name LIKE '%deleted%';`
 7. Now, uninstall layout_builder and layout_discovery
     * Now, breath again…
-8. To try out graphql queries, go to /graphql/explorer in drupal.
+8. To try out graphql queries, go to /graphql/explorer in drupal (navigate to Configuration > Web Services > GraphQL > Schemas > Explorer).
 9. The Graphql endpoint to be used by your React app will be /graphql…..
 10. BUT FIRST, you need to set up query maps in Drupal.
     1. /admin/config/graphql/query-maps/config
@@ -59,12 +59,12 @@ https://www.drupal.org/files/issues/2020-05-04/2980299-64.patch
         3. Make another directory called graphql_drupal_query_maps to store the generated maps.
         4. Copy what you created for the GraphQL query in the explorer page in Drupal to a file inside the directory from #2 with the .graphql file extension.  So, for example, tutorials_list.graphql
         5. Run: `persistgraphql graphql_drupal_queries/ path/to/graphql_drupal_query_maps/output.json`
-            1. See usage:<br/> 
+            1. See usage:<br/>
             https://github.com/apollographql/persistgraphql<br/>
             ```Should do something like:<br/>
             Crawling graphql_drupal_queries/...
             Wrote output file to /Users/robert.barnett/Documents/graphql_drupal_query_maps/output.json.
-        6. Find output.json and import on<br/> 
+        6. Find output.json and import on<br/>
            /admin/config/graphql/query-maps/config<br/>
         7. Once imported, it will show a hash, and you can inspect it.  
         8. Graphql endpoint will be: `/graphql?queryId=[hash]:[ID]`
@@ -109,5 +109,3 @@ https://www.drupal.org/files/issues/2020-05-04/2980299-64.patch
        	},
    	})
 ```      
-
-
