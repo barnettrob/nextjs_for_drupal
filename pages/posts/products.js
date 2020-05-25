@@ -6,14 +6,11 @@ export default function FirstPost() {
     return (
         <Layout>
             <Head>
-                <title>First Post</title>
+                <title>Download EDB Postgres</title>
             </Head>
-            <h1>First Post</h1>
-            <h2>
-                <Link href="/">
-                    <a>Back to home</a>
-                </Link>
-            </h2>
+            <div className="container text-center my-0">
+			    Download EDB Postgres
+			  </div>
         </Layout>
     )
 }
