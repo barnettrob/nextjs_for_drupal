@@ -72,21 +72,27 @@ https://www.drupal.org/files/issues/2020-05-04/2980299-64.patch
             http://mydrupalsite/graphql?queryId=0e2f6a04e07691141f9bdc235f959d055f34c6c1:1
 11. <b>Authentication</b> for GraphQL endpoints in Drupal
     1. Install jwt module (https://www.drupal.org/project/jwt)
+        1. Because jwt token expires by default, use dev version
+            1. `composer require drupal/jwt:1.x-dev`
+            2. Apply patch that makes token expiration configurable
+                1. https://www.drupal.org/project/jwt/issues/2782571
+                    1. https://www.drupal.org/files/issues/2019-09-24/2782571-11.patch        
     2. Generate a JWT RSA Key (follow instructions on jwt project page above)
     3. Create a folder at the root of the Drupal project called jwt_key
     4. cd into jwt_folder and chmod 600 jwt.key.txt
     5. Go to the JWT Authentication config page and choose key you just created.
         1. At this config page: /admin/config/system/jwt, "create a new key" link
-            1. In create a new key page, add the key:
+            1. JWT Expiration (minutes): 0
+            2. In create a new key page, add the key:
                 1. Give it a name
                 2. Key type: JWT RSA Key
                 3. Key provider: File
                 4. File path: /var/www/jwt_key/jwt.key.txt
-            2. Go back to JWT configuration page: /admin/config/system/jwt
+            3. Go back to JWT configuration page: /admin/config/system/jwt
                 1. Algorithm: RSASSA-PKCS1…..
                 2. Private Key: select key just created (by name)
                 3. Save configuration
-            3. Next follow media current's article below:<br/>
+            4. Next follow media current's article below:<br/>
                 https://www.mediacurrent.com/blog/using-json-web-tokens-jwt-authenticate-requests-rest-resources-drupal-8/
                 1. But basically, need to enable some more modules:<br/>
                     1. drush en jwt_auth_consumer jwt_auth_issuer -y
