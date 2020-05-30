@@ -5,15 +5,20 @@ function Layout({children, home}) {
 	return (
 		<>
 			<Head>
-			  <meta charset="utf-8" />
+			  <meta charSet="utf-8" />
 			  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-			  <link rel="stylesheet" href="https://edb-ux.herokuapp.com/edb-ivory-css/bootstrap-tweaked-20200421.min.css" />
+			  <link rel="stylesheet" href="https://edb-ux.herokuapp.com/edb-ivory-css/edb-ivory-bootstrap.min.css" />
 			</Head>
 			<Nav />
 			<main role="main">
-				<section className="bg-white border-bottom text-dark py-5">
+				<section className="bg-white text-dark py-7">
 						{children}
 				</section>
+				<style jsx global>{`
+			.opacity-1 {
+				opacity: .4
+			}
+      `}</style>
 			</main>
 		</>	
 		)

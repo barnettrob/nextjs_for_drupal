@@ -3,7 +3,7 @@ export default function Nav() {
 		<>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top py-3">
 			  <div className="container">  
-			    <a className="navbar-brand font-weight-bold" href="index.php">EDB</a>
+			    <a className="navbar-brand font-weight-bold" href="/">EDB</a>
 			    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#edbNavbar" aria-controls="edb-navbar" aria-expanded="false" aria-label="Toggle navigation">
 			      <span className="navbar-toggler-icon"></span>
 			    </button>

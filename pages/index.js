@@ -23,6 +23,8 @@ export default function Home({ allPostsData }) {
                 <h1 className="balance-text">Get the most from Postgres</h1>
                 <p className="lead text-muted balance-text">Products, services, and support to help you control<br data-owner="balance-text" />database risk, manage costs, and scale efficiently</p>
                 <a className="btn btn-primary px-4 mr-2" href="#" role="button">Download</a>
+                <a className="btn btn-primary px-4 mr-2" href="/posts/tutorials" role="button">Postgres Tutorials</a>
+                <a className="btn btn-primary px-4 mr-2" href="/posts/blog-posts" role="button">Blog Posts</a>
                 <a className="btn btn-primary px-4" href="#" role="button">Learn More</a>
               </div>
             </div>
