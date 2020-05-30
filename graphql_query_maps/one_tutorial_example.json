@@ -1,0 +1,1 @@
+{"{\n  nodeById(id: \"1258139\", language: EN) {\n    entityId\n    entityCreated\n    title\n    status\n    ... on NodeTutorials {\n      fieldAuthoredByRef {\n        entity {\n          entityLabel\n        }\n      }\n    }\n  }\n}\n":1}
