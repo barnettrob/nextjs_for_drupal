@@ -50,7 +50,7 @@ function EdbContent(props) {
 
 
 EdbContent.getInitialProps = async function () {
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTA0MTM5NzQsImRydXBhbCI6eyJ1aWQiOiI0ODQyODEifX0.p2IA3KiU4nRqvQwMdBoMA_Rb9KKosvLy1MFzrZfdp-moYgcH6JNhJgml8gsQhlXMt1EKYIRjxxbVjUoaMA3P08WszSeGJ5zUV_QXGGonVs0VZiH8zg9RiNp1-tvK9B1NibDSA2OiLia_Xb7BAgT9It6Ioqgtd3IcceczLpYc7mprXd2R133j1QibmYmQEYIgs78SyZvutKULDxbqL5X2ixCixGSw29OMX-Nhs6fK2Q9X43mrREJQW6LmTtnIPaMpZTNbHi5dPrWe8opDN_CmtpyA4mLnu9n9c3xPLCORITu_zICVf-Tk9Iam-ppFzDBYK-Y9w5OCu-yFTv7_5MIjrw'
+    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTA4NDI2NDAsImRydXBhbCI6eyJ1aWQiOiI0ODQyODEifX0.tnttgnORSjBvchgLVlMtOZpyldxI1ayVZQTTFNNqkT_2RP5dRZTWv9BjH1FsBBNTTZKr2F_qFI8rIY5n_jlsYnncqU_GsxRiypn6gBbKPf_zQ3MNXIc7Ua-Q85LxXZQN4OQQ2snEWuSSq-9oCW_GGljXgJ5zk96IWQ2Y13mWJHOYinRBt2hP263hDrgp1Uy7_inRkvcah22hNhXD9cmor2-Utr-ZQPd6gbduUsA7AhNwdh5aVWKVvmSq2h7FKv37fWm_GOIqku4sUDax8CjON6jXEs6kNefCzrjN_boMtw1VrRawxflrOCPncM2Ez62jNDshNfd0EB_Y8cCpQ-q9kg'
     //const res = await fetch('https://jsonplaceholder.typicode.com/todos')
     //const url 'http://uxteam:neo2020@redesign.docksal/jsonapi/node/tutorials_?page[limit]=10&filter[status][value]=1'
     const url = 'http://headless.docksal/graphql?queryId=a1e0b3f4019e514a581d765431ac078831357500:1'
