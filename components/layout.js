@@ -15,6 +15,10 @@ function Layout({children, home}) {
 						{children}
 				</section>
 				<style jsx global>{`
+				@font-face {
+					font-family: 'Signika';
+					src: url('../fonts/signika-vf.woff2') format("woff");
+				  }
 			.opacity-1 {
 				opacity: .4
 			}

@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import PlaceholderSvg from '../placeholder-svg'
 import BackSvg from '../back-svg'
+import {withRouter} from 'next/router'
 
 function TutorialPost(props) {
     console.warn("data", props.data)
@@ -50,13 +51,13 @@ function TutorialPost(props) {
                     <p className="text-center">
                         {
                             props.data.nodeById.fieldPostgresqlTaxonomy.map(data => (
-                                <span className="badge badge-secondary">{data.entity.entityLabel}</span>
+                                <span key={data.entity.entityLabel} className="badge badge-secondary">{data.entity.entityLabel}</span>
                             ))
                         }
 
                         {
                             props.data.nodeById.fieldExperienceLevelTaxonomy.map(data => (
-                                <span className="badge badge-secondary">{data.entity.entityLabel}</span>
+                                <span key={data.entity.entityLabel} className="badge badge-secondary">{data.entity.entityLabel}</span>
                             ))
                         }
                     </p>
@@ -72,7 +73,7 @@ function TutorialPost(props) {
     )
 }
 
-TutorialPost.getInitialProps = async function () {
+TutorialPost.getInitialProps = async function (withRouter) {
     const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTA4NDI2NDAsImRydXBhbCI6eyJ1aWQiOiI0ODQyODEifX0.tnttgnORSjBvchgLVlMtOZpyldxI1ayVZQTTFNNqkT_2RP5dRZTWv9BjH1FsBBNTTZKr2F_qFI8rIY5n_jlsYnncqU_GsxRiypn6gBbKPf_zQ3MNXIc7Ua-Q85LxXZQN4OQQ2snEWuSSq-9oCW_GGljXgJ5zk96IWQ2Y13mWJHOYinRBt2hP263hDrgp1Uy7_inRkvcah22hNhXD9cmor2-Utr-ZQPd6gbduUsA7AhNwdh5aVWKVvmSq2h7FKv37fWm_GOIqku4sUDax8CjON6jXEs6kNefCzrjN_boMtw1VrRawxflrOCPncM2Ez62jNDshNfd0EB_Y8cCpQ-q9kg'
     const url = 'http://headless.docksal/graphql?queryId=caa6a03e815a0396ebe05bd91c23aeec104c1797:1'
     const query = `query nodeQuery($id:String!) {
@@ -119,8 +120,10 @@ TutorialPost.getInitialProps = async function () {
           }
         }
       }`
+
+    const nid = withRouter.query.id  
     const variables = {
-        id: '1258139'
+        id: `${nid}`
     }
 
     const graphQLClient = new GraphQLClient(url, {
@@ -136,4 +139,4 @@ TutorialPost.getInitialProps = async function () {
     }
 }
 
-export default TutorialPost
+export default withRouter(TutorialPost)

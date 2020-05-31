@@ -115,3 +115,20 @@ https://www.drupal.org/files/issues/2020-05-04/2980299-64.patch
        	},
    	})
 ```      
+13. Issue with CORS can be fixed with setting up cors.config in services.yml in Drupal (sites/default/services.yml) as:<br />
+    Make sure these values are indented under parameters key.<br />
+``` cors.config:
+    enabled: true
+    # Specify allowed headers, like 'x-allowed-header'.
+    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin']
+    # Specify allowed request methods, specify ['*'] to allow all possible ones.
+    allowedMethods: ['*']
+    # Configure requests allowed from specific origins.
+    allowedOrigins: ['*']
+    # Sets the Access-Control-Expose-Headers header.
+    exposedHeaders: false
+    # Sets the Access-Control-Max-Age header.
+    maxAge: false
+    # Sets the Access-Control-Allow-Credentials header.
+    supportsCredentials: false
+```

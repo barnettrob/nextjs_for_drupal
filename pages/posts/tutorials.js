@@ -31,7 +31,7 @@ function Tutorials(props) {
                     <div key={data.entityId} className="d-flex align-items-center border-top position-relative py-4 flex-column flex-sm-row text-center text-sm-left">
                         <div className="py-2">
                         <h3 className="m-0"> 
-                            <Link as={''} href={`#`}>
+                            <Link as={''} href={`/posts/tutorial-post?id=${data.entityId}`}>
                                 <a className="text-dark stretched-link">{data.entityLabel}</a>
                             </Link>
                         </h3>
