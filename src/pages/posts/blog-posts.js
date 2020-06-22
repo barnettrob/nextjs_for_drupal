@@ -1,15 +1,13 @@
 import Link from 'next/link'
-// npm install --save isomorphic-unfetch
 import fetch from 'isomorphic-unfetch'
 import Head from 'next/head'
-import Layout from '../../components/layout'
 import PlaceholderSvg from '../placeholder-svg'
 
 function BlogPosts(props) {
     console.warn("data", props.data.data.nodeQuery.entities)
     return (
         <>
-            <Layout>
+            <>
             <Head>
                 <title>EDB | Blog</title>
             </Head>
@@ -48,7 +46,7 @@ function BlogPosts(props) {
                 </div>
             </div>
           </div>
-          </Layout>
+          </>
         </>
     )
 }

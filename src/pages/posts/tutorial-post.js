@@ -4,7 +4,6 @@ import fetch from 'isomorphic-unfetch'
 // npm add graphql-request
 import { GraphQLClient } from 'graphql-request'
 import Head from 'next/head'
-import Layout from '../../components/layout'
 import PlaceholderSvg from '../placeholder-svg'
 import BackSvg from '../back-svg'
 import {withRouter} from 'next/router'
@@ -13,7 +12,7 @@ function TutorialPost(props) {
     console.warn("data", props.data)
     return (
         <>
-            <Layout>
+            <>
             <Head>
                 <title>EDB | Tutorial Node</title>
             </Head>
@@ -68,7 +67,7 @@ function TutorialPost(props) {
                 </div>
             </div>
           </div>
-          </Layout>
+          </>
         </>
     )
 }

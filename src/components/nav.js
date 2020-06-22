@@ -1,4 +1,6 @@
-export default function Nav() {
+import Link from "next/link";
+
+export default function Nav({user}) {
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top py-3">
@@ -77,10 +79,27 @@ export default function Nav() {
 			        </li>
 
 			      {/* sign in */}
-			        <li className="nav-item">
-			          <a className="nav-link text-nowrap font-weight-bolder small px-xl-3 px-lg-2" href="auth-sign-in.php">Sign In</a>
-			        </li>
-
+					{user && (
+						<>
+						<li className="nav-item">
+							<Link href="/profile">
+								<a className="nav-link text-nowrap font-weight-bolder small px-xl-3 px-lg-2">Profile</a>
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link href="/logout">
+								<a className="nav-link text-nowrap font-weight-bolder small px-xl-3 px-lg-2" href="auth-sign-in.php">Sign Out</a>
+							</Link>
+						</li>
+						</>
+					)}
+					{!user && (
+						<li className="nav-item">
+							<Link href="/login">
+								<a className="nav-link text-nowrap font-weight-bolder small px-xl-3 px-lg-2" href="auth-sign-in.php">Sign In</a>
+							</Link>
+						</li>
+					)}
 			      </ul>
 
 			    </div>{/* /navbar-collapse */}
