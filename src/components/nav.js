@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function Nav({user}) {
 	return (
 		<>
@@ -96,7 +97,7 @@ export default function Nav({user}) {
 					{!user && (
 						<li className="nav-item">
 							<Link href="/login">
-								<a className="nav-link text-nowrap font-weight-bolder small px-xl-3 px-lg-2" href="auth-sign-in.php">Sign In</a>
+								<a className="nav-link text-nowrap font-weight-bolder small px-xl-3 px-lg-2" href={process.env.OKTA_ISSUER_URL}>Sign In</a>
 							</Link>
 						</li>
 					)}

@@ -5,7 +5,7 @@ const express = require("express");
 const http = require("http");
 const next = require("next");
 const session = require("express-session");
-const fs = require('fs');
+
 
 const passport = require("passport");
 const SamlStrategy = require('passport-saml').Strategy;
