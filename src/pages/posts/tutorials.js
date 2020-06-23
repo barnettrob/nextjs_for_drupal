@@ -2,7 +2,6 @@ import Link from 'next/link'
 // npm install --save isomorphic-unfetch
 import fetch from 'isomorphic-unfetch'
 import Head from 'next/head'
-import Layout from '../../components/layout'
 import PlaceholderSvg from '../placeholder-svg'
 
 function Tutorials(props) {
