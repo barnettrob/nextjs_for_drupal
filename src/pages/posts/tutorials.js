@@ -8,7 +8,6 @@ function Tutorials(props) {
     console.warn("data", props.data.data.nodeQuery.entities)
     return (
         <>
-            <Layout>
             <Head>
                 <title>EDB | Postgres Tutorials</title>
             </Head>
@@ -44,7 +43,6 @@ function Tutorials(props) {
                 </div>
             </div>
           </div>
-          </Layout>
         </>
     )
 }
