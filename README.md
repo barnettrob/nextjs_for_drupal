@@ -132,3 +132,10 @@ https://www.drupal.org/files/issues/2020-05-04/2980299-64.patch
     # Sets the Access-Control-Allow-Credentials header.
     supportsCredentials: false
 ```
+14. To integrate the SSO functionality with Okta. You need to follow below steps:
+    1. After pulling the latest code from login branch
+    2. Run npm install
+    3. Check the .env file, it should contain all the Okta configuration settings and port number. We can change Port number if we want site to run on different port from .env file.
+    4. npm run dev
+    5. To test, click Sign In link from menu. Site will be redirected to stage.enterprisedb.com for credentials.
+    6. The account should be added to Testing application created on Oktapreview server.
