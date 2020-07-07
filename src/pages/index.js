@@ -25,7 +25,7 @@ function Home({ allPostsData }) {
                       <a className="btn btn-primary px-4 mr-2" href="#" role="button">Download</a>
                       <a className="btn btn-primary px-4 mr-2" href="/posts/tutorials" role="button">Postgres Tutorials</a>
                       <a className="btn btn-primary px-4 mr-2" href="/posts/blog-posts" role="button">Blog Posts</a>
-                      <a className="btn btn-primary px-4" href="#" role="button">Learn More</a>
+                      <a className="btn btn-primary px-4" href="/contact" role="button">Contact</a>
                   </div>
               </div>
           </div>

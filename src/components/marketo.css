@@ -1,0 +1,134 @@
+form.mktoForm {
+    font-family: Signika,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+}
+
+.node__content .mktoForm label.mktoLabel {
+    width: auto !important;  
+}
+  
+.mktoOffset, .mktoGutter.mktoHasWidth, .mktoClear, .mktoForm .mktoRequiredField .mktoAsterix {
+    display: none;
+}
+  
+.node__content .mktoForm {
+    max-width: 600px !important;
+}
+  
+form.mktoForm .mktoFormRow .mktoFieldWrap input, 
+form.mktoForm .mktoFormRow .mktoFieldWrap select {
+    width: 500px !important;
+    margin-bottom: 0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 0.25rem !important;
+    height: calc(1.5em + .75rem + 2px) !important;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out !important;
+}
+.mktoForm .mktoFormRow textarea {
+    min-width: 500px;
+    min-height: 172px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 40px !important;
+}
+
+form.mktoForm .mktoFormRow .mktoFieldWrap input[type='checkbox'] {
+    width: 100% !important;
+    margin-top: -20px !important;
+}
+
+.mktoForm .mktoRequiredField .mktoAsterix {
+    display: none !important;
+}
+
+.mktoForm .mktoFormCol {
+    width: 100%;
+    min-height: 4.5em !important;
+}
+  
+.mktoFieldWrap {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 20px;
+    width: 100%;
+}
+  
+.mktoForm .mktoFormRow:nth-of-type(10) {
+    display: grid;
+    grid-template-columns: 30px auto;
+}
+  
+.mktoForm .mktoFormRow:nth-of-type(10) .mktoFieldWrap {
+    display: initial;
+}
+  
+.mktoHtmlText.mktoHasWidth {
+    width: 100% !important;
+}
+  
+.mktoButtonWrap.mktoSimple {
+    width: 100%;
+    margin: auto !important;
+    display: block;
+}
+  
+.mktoForm .mktoFormRow .mktoError {
+    overflow: visible;
+    top: 40px;
+}
+
+/* .mktoForm .mktoError .mktoErrorArrowWrap {
+    display: none !important;
+} */
+
+/* .mktoForm .mktoError .mktoErrorMsg {
+    background-image: none !important;
+    background-color: transparent !important;
+    color: #ff0000 !important;
+    box-shadow: none !important;
+    border: none !important;
+    text-shadow: none !important;
+    max-width: unset !important;
+    font-size: 11px !important;
+    display: none !important;
+} */
+
+form.mktoForm .mktoHtmlText {
+    font-size: 12.8px;
+}
+  
+.mktoForm .mktoFormRow input, .mktoForm .mktoFormRow select {
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+}
+  
+.mktoButtonRow {
+    width: 670px !important;
+    margin: 15px 0 50px 0 !important;
+}
+
+.mktoButtonRow .mktoButton {
+    border-radius: 0.25rem !important;
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .mktoFieldWrap {
+        grid-template-columns: auto;
+    }
+  
+    .mktoForm .mktoFormRow .mktoError {
+        top: 80px;
+    }
+}
+  
+@media only screen and (min-width: 768px) {
+    .mktoForm .mktoFormRow .mktoError {
+        left: 175px !important;
+    }
+}
+  
+          
+  
+          
