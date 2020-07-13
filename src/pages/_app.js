@@ -5,6 +5,7 @@ import App, { Container as NextContainer } from "next/app";
 import Container from "react-bootstrap/Container"
 import Head from "next/head";
 import Nav from "../components/nav";
+import '../components/marketo.css'
 
 class MyApp extends App {
     static async getInitialProps({ Component, ctx }) {
