@@ -14,12 +14,12 @@ function Profile({ user }) {
                 </h2>
                 <p>This is what we know about you:</p>
                 <ul>
-                    <li>
+                    {/* <li>
                         Username: {user.username}
                     </li>
                     <li>
                         Email Id: {user.federationid}
-                    </li>
+                    </li> */}
                     {/*{ Object.keys(user).map(key => (*/}
                         {/*<li key={key}>{key}: {user[key].toString()}</li>*/}
                     {/*))}*/}
